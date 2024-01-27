@@ -19,4 +19,22 @@ function makeGrid(size){
         grid.appendChild(newLine)
     }
 }
-makeGrid(100)
+function clearGrid(){
+    let grid=document.querySelector("#myGrid")
+    while(grid.firstChild){grid.removeChild(grid.firstChild)}
+}
+let defaultVal=16
+let clearBtn=document.querySelector("#clear")
+clearBtn.addEventListener('click',()=>{
+    clearGrid()
+    makeGrid(defaultVal)
+})
+let newGrid=document.querySelector('#newGrid')
+newGrid.addEventListener('click',()=>{
+    defaultVal=parseInt(prompt("What size grid do you want? Please pick a number from 1-100."))
+    while (defaultVal>100 || defaultVal<0){defaultVal=parseInt(prompt("That is not a valid number. Please pick a number from 1-100."))}
+    clearGrid()
+    makeGrid(defaultVal)
+})
+
+makeGrid(defaultVal)

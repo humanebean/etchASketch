@@ -1,7 +1,6 @@
 #gridContainer{
     display: flex;
     justify-content: center;
-    margin-top: 10%;
 }
 #myGrid{
     display: flex;
@@ -27,3 +26,17 @@
     flex-basis: 100%;
     height: 0;
   }
+.btn{
+    display: flexbox;
+    padding: 20px;
+    justify-content: center;
+    margin: 15px;
+    
+}
+#btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0%;
+}
